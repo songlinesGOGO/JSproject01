@@ -16,6 +16,131 @@ body {
     margin: 0;
 }
 
+/* responsive setting */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.5rem;
+    }
+    h1 {
+        font-size: 4.5rem;
+    }
+    h2 {
+        font-size: 2.25em;
+    }
+    .container{
+        min-width: 750px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    .home{
+        min-height: 600px;
+        background-image: url(../img/js-top2.png);
+        background-size: 15rem;
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+    .home h1{
+        line-height: 7.5rem;
+        font-size: 5.5rem;
+    }
+    .home p {
+        line-height: 2.5rem;
+        margin: 6rem 0;
+        font-size: 1.2rem;
+    }
+    .home ul{
+        font-size: 3.5rem;
+    }
+    .home li::before{
+        top: 7px;
+        left: -25px;
+        font-size: 2.75rem;
+    }
+    .current_time {
+        font-size: 5.5rem;
+    }
+    .timer{
+        font-size: 6rem;
+        padding: 0.5rem 0 0;
+    }
+    .buttons button{
+        font-size: 3.25rem;
+        width:12rem;
+        margin: 0 20px 0 0;
+        padding: 5px;
+        text-transform: uppercase;
+    }
+    .newtask button, input{
+        font-size: 3rem;
+        margin: 4rem 0;
+    }
+    .tasks, .tasks button{
+        font-size: 3rem; 
+    }
+    .stopwatch, .todo{
+        padding:6rem 0;
+        min-height: 700px;
+        text-align: center;
+    }    
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+        font-size: 1.5em;
+        line-height: 3rem;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+    img{
+        display: none;
+        visibility: hidden;
+    }
+    .container{
+        min-width: 280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    .home{
+        background-image: none;
+    }
+    .home h1 {
+        color: #F5D647;
+    }
+    .home p {
+        margin: 2rem 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .home li::before{
+        top: -2px;
+        left: 10px;
+        font-size: 1.5rem;
+    }
+    .timer{
+        font-size: 1.5rem;
+        padding: 0.5rem 0 0;
+    } 
+    .buttons button{
+        width:4rem;
+        margin: 0 20px 0 0;
+        padding: 5px;
+        text-transform: uppercase;
+    }  
+    .newtask button, input{
+        margin: 1rem 0;
+    }
+    .tasks, .tasks button{
+        font-size: 1rem; 
+    }
+    .stopwatch, .todo{
+        padding:6rem 0;
+        min-height: 200px;
+        text-align: center;
+    }    
+  }
+
+  /* common settings */
 a {
     color:aliceblue;
 }
@@ -25,12 +150,10 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 5em;
     text-transform: uppercase;
 }
 
 h2 {
-    font-size: 2.25em;
     color: var(--secondary-color);
 }
 
@@ -38,50 +161,29 @@ p {
     font-size: 1.5em;
 }
 
+.content{
+    margin: 0;
+    padding: 0;
+}
+
 .header{
     height:2.75rem;
 }
 
 .wrapper{
-    width: 90%;
+    min-width: 250px;
     padding-top: 60px;
     margin-right: auto;
     margin-left: auto;
   }
 
 
-.container{
-    width: 850px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-
 /* Home */
-
-.home {
-    min-height: 600px;
-    background-image: url(../img/js-top2.png);
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position: right top;
-}
-
 .home h1{
-    font-size: 5.5rem;
-    margin: 4rem 0 2rem;
-    line-height: 7.5rem;
+    margin: 4rem 0 0.25rem;
 }
-
-.home p {
-    line-height: 2.5rem;
-    margin: 6rem 0;
-    font-size: 1.2rem;
-}
-
 
 .home ul{
-    font-size: 3.5rem;
     text-transform: uppercase;
 }
 
@@ -95,12 +197,9 @@ p {
 .home li::before{
     content: "\25BA \0020";
     position: absolute;
-    top: 7px;
-    left: -25px;
-    font-size: 2.75rem;
 }
 
-.home li a{
+.home a{
     text-decoration: none;
 }
 
@@ -108,37 +207,26 @@ p {
     color: var(--secondary-color);
 }
 
+.current_time {
+    letter-spacing: 0.2rem;
+}
+
 
 /* Stopwatch */
-.stopwatch, .todo{
-    padding:6rem 0;
-    min-height: 700px;
-    text-align: center;
+.stopwatch_img{
+    width: 4rem; 
+    margin-right: 5px;
 }
 
 .timer{
-    font-size: 6rem;
     padding: 0.5rem 0 0;
 }
 
 .buttons button{
-    font-size: 4rem;
-    width:16rem;
-    margin: 0 20px 0 0;
-    padding: 5px;
     text-transform: uppercase;
 }
 
 /* To-Do list */
-.newtask button, input{
-    font-size: 3rem;
-    margin: 4rem 0;
-}
-
-.tasks, .tasks button{
-    font-size: 3rem; 
-}
-
 .delete{
     width: 3rem;
     height: 3rem;
