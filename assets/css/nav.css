@@ -55,3 +55,24 @@ html, body {
   color: var(--secondary-color);
 }
 
+/* footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #999;
+}
+
+footer p {
+  text-align: center;
+  font-size: 16px;
+  margin: 0.5rem auto;
+  padding: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #999;
+}
