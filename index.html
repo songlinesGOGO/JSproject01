@@ -7,13 +7,13 @@
 
     <!-- Web page CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />    
-    <link rel="stylesheet" href="assets/css/nav.css">           
-    
+    <link rel="stylesheet" href="assets/css/nav.css">               
 
     <title>Time to Workout</title>
   </head>
 
   <body>
+
     <!-- header -->
     <div class="header">
       <div id="navbar">
@@ -23,54 +23,65 @@
       </div>
     </div>
 
-    <!-- contents -->
+    <!-- wrapper -->
     <div class="wrapper">
-        <!-- Home & Clock -->
+
+        <!-- container -->
         <div class="container"  id="home">
 
-          <div class="home">
-          <h1>Time to workout?
-          <span id="clock" onload="showTime()" style="font-weight:400; letter-spacing: 0.2rem;"></span></h1>
-          <ul>
-            <li><a href="#stopwatch">Stopwatch</a></li>
-            <li><a href="#todo">To-Do List</a></li>
-          </ul>
+            <!-- Home -->          
+            <div class="home">
+            <h1>Time to <br />
+              workout?</h1>
+            <span id="clock" onload="showTime()" class="current_time"></span></h1>
+            <ul>
+              <a href="#stopwatch"><li>Stopwatch</li></a>
+              <a href="#todo"><li>To-Do List</li></a>
+            </ul>
+            <p>You can manage your exercise effectively utilising these tools of stopwatch and To-Do list. The letters are big enough so that you can see while exercising.<br>
+            This is the sample website to showcase some JavaScript projects including stopwatch, To-Do list, clock, and sticky navigation. Please feel free to contact <a href="https://www.yoshikok.org/" target="_blank">me</a> for Web development, Python, Javascript, and Data Analysis projects.
+          </p>
+            </div>
 
-          <p>You can manage your exercise effectively utilising these tools of stopwatch and To-Do list. The letters are big enough so that you can see while exercising.<br>
-          This is the sample website to showcase some JavaScript projects including stopwatch, To-Do list, clock, and sticky navigation. Please feel free to contact <a href="https://www.yoshikok.org/" target="_blank">me</a> for Web development, Python, Javascript, and Data Analysis projects.</p>
+            <!-- Stopwatch  -->
+            <div class="stopwatch" id="stopwatch">    
+              <h1><img src="./assets/img/stopwatch.png" alt="stopwatch" class="stopwatch_img">Stopwatch</h1>
+              <h2>Time your muscle training.</h2>
+              <p class="timer">
+                <span id="mins">00</span>:<span id="seconds">00</span>:<span id="tens">00</span>
+              </p>
+              <p class="buttons">
+                <button id="button-start">Start</button>
+                <button id="button-stop">Stop</button>
+                <button id="button-reset">Reset</button>
+              </p>
+            </div>
 
-         </div>
+            <!-- To-Do- list  -->
+            <div class="todo" id="todo">
+                <h1><img src="./assets/img/note.png" alt="note" style="width: 4rem; margin-right: 12px;">To-Do list</h1>
+                <h2>Manage your tasks.</h2>    
+                <div class="newtask" id="newtask">
+                  <input type="text" placeholder="Add Tasks" />
+                  <button id="push">Add</button>
+                </div>
+                <div class="tasks" id="tasks"></div>
+            </div>
 
-    <!-- Stopwatch  -->
-         <div class="stopwatch" id="stopwatch">
-      
-         <h1><img src="./assets/img/stopwatch.png" alt="stopwatch" style="width: 4rem; margin-right: 5px;">Stopwatch</h1>
-         <h2>Time your muscle training.</h2>
-         <p class="timer">
-         <span id="mins">00</span>:<span id="seconds">00</span>:<span id="tens">00</span>
-         </p>
-         <p class="buttons">
-         <button id="button-start">Start</button>
-         <button id="button-stop">Stop</button>
-         <button id="button-reset">Reset</button>
-         </p>
-         </div>
-
-    <!-- To-Do- list  -->
-         <div class="todo" id="todo">
-         <h1><img src="./assets/img/note.png" alt="note" style="width: 4rem; margin-right: 12px;">To-Do list</h1>
-         <h2>Manage your tasks.</h2>
-    
-         <div class="newtask" id="newtask">
-          <input type="text" placeholder="Add Tasks" />
-          <button id="push">Add</button>
-          </div>
-         <div class="tasks" id="tasks"></div>
-
-      </div>
-
+        </div>
     </div>
-    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy;2023. All Rights Reserved</p>
+      <p><a href="http://www.yoshikok.org" target="_blank">yoshikok.org</a></p>
+    </footer>
+
+    <!-- Ion icons CDN -->
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
 
     <!-- Web page JS -->
     <script src="assets/js/nav.js"></script>
